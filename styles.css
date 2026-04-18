@@ -1,0 +1,437 @@
+/*
+  The Grand Machal - Shared Styles
+  Premium dark + gold theme with responsive layouts and subtle animations.
+*/
+
+:root {
+  --bg: #0f1115;
+  --bg-soft: #171a21;
+  --card: #1d222c;
+  --text: #f7f8fa;
+  --muted: #b8bfcc;
+  --gold: #d6b36a;
+  --gold-soft: #efd7a1;
+  --white: #ffffff;
+  --border: rgba(214, 179, 106, 0.25);
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+/* Sticky header and navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 17, 21, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.brand span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  list-style: none;
+}
+
+.nav-links a {
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  color: var(--muted);
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--white);
+  background: rgba(214, 179, 106, 0.14);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--gold-soft);
+  border-radius: 8px;
+  padding: 0.3rem 0.55rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.78rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), #c59845);
+  color: #15171d;
+  box-shadow: 0 8px 24px rgba(214, 179, 106, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(214, 179, 106, 0.32);
+}
+
+.btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold-soft);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(214, 179, 106, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Hero sections */
+.hero {
+  min-height: 76vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 9, 12, 0.25), rgba(8, 9, 12, 0.76));
+  z-index: -1;
+}
+
+.hero-content {
+  width: min(760px, 92%);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  margin-bottom: 0.9rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: #e4e6ec;
+  margin-bottom: 1.4rem;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+}
+
+.hero-home {
+  background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+}
+
+.hero-about {
+  background: url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+}
+
+.hero-rooms {
+  background: url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+}
+
+.hero-restaurant {
+  background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+}
+
+.hero-activities {
+  background: url("https://images.unsplash.com/photo-1577212017184-80cc0da11082?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+}
+
+.hero-events {
+  background: url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+}
+
+.hero-contact {
+  background: url("https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+}
+
+section {
+  padding: 4.5rem 0;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  margin-bottom: 0.8rem;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  max-width: 740px;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.02)), var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(214, 179, 106, 0.46);
+}
+
+.card h3 {
+  margin: 0.9rem 0 0.4rem;
+}
+
+.card p,
+.card li {
+  color: var(--muted);
+}
+
+.card ul {
+  list-style: none;
+  margin: 0.8rem 0 1rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.price {
+  color: var(--gold-soft);
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #171717;
+  background: var(--gold-soft);
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+
+/* Booking and forms */
+.form-wrap {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--gold-soft);
+  font-size: 0.95rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(9, 10, 12, 0.6);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.96rem;
+}
+
+.form-field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-message {
+  margin-top: 0.7rem;
+  font-weight: 600;
+  min-height: 1.2rem;
+}
+
+.form-message.success {
+  color: #89d786;
+}
+
+.form-message.error {
+  color: #ff8f8f;
+}
+
+/* Footer */
+.site-footer {
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--border);
+  background: #0b0d11;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.footer-links,
+.footer-contact,
+.socials {
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.footer-links a,
+.socials a {
+  color: var(--muted);
+}
+
+.footer-links a:hover,
+.socials a:hover {
+  color: var(--gold-soft);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive rules */
+@media (max-width: 960px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    right: 4%;
+    background: #0e1014;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.9rem;
+    min-width: 220px;
+    flex-direction: column;
+    align-items: stretch;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .form-grid,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 3.4rem 0;
+  }
+}
