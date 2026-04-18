@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Grand Machal | Luxury Resort</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="brand" href="index.html">The Grand <span>Machal</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-home">
+        <div class="hero-content reveal">
+          <p class="badge">5-Star Luxury Escape</p>
+          <h1>Where Elegance Meets the Mountains</h1>
+          <p>
+            Experience premium comfort, curated dining, and unforgettable moments at The Grand Machal.
+          </p>
+          <a class="btn btn-primary" href="#booking">Book Now</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="section-title reveal">Welcome to The Grand Machal</h2>
+          <p class="section-subtitle reveal">
+            Set amidst breathtaking natural beauty, our resort combines modern luxury with warm hospitality.
+            From serene suites to destination weddings, every detail is designed to elevate your stay.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="section-title reveal">Resort Highlights</h2>
+          <div class="grid grid-4">
+            <article class="card reveal">
+              <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=80" alt="Luxurious room" />
+              <h3>Luxury Rooms</h3>
+              <p>Elegant room categories tailored for every style of travel.</p>
+              <a class="btn btn-outline" href="rooms.html">Explore Rooms</a>
+            </article>
+            <article class="card reveal">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="Fine dining" />
+              <h3>Fine Dining</h3>
+              <p>Signature cuisines crafted by chefs with authentic and global flavors.</p>
+              <a class="btn btn-outline" href="restaurant.html">View Restaurant</a>
+            </article>
+            <article class="card reveal">
+              <img src="https://images.unsplash.com/photo-1489945052260-4f21c52268b9?auto=format&fit=crop&w=1000&q=80" alt="Resort activities" />
+              <h3>Activities</h3>
+              <p>Adventure, sports, and leisure options for guests of all ages.</p>
+              <a class="btn btn-outline" href="activities.html">See Activities</a>
+            </article>
+            <article class="card reveal">
+              <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1000&q=80" alt="Destination event" />
+              <h3>Celebrations</h3>
+              <p>Host weddings and events with world-class decor and catering.</p>
+              <a class="btn btn-outline" href="events.html">Plan an Event</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="section-title reveal">What Guests Say</h2>
+          <div class="grid grid-3">
+            <article class="card reveal">
+              <p>“One of the finest stays we’ve had. The rooms and service were exceptional.”</p>
+              <h3>- Meera & Rahul</h3>
+            </article>
+            <article class="card reveal">
+              <p>“The dining experience was stunning. Every meal felt curated and memorable.”</p>
+              <h3>- Arjun Singh</h3>
+            </article>
+            <article class="card reveal">
+              <p>“We hosted our family celebration here and everything was seamless and elegant.”</p>
+              <h3>- Nandita Kapoor</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking">
+        <div class="container reveal">
+          <h2 class="section-title">Book Your Stay</h2>
+          <p class="section-subtitle">Reserve your preferred room in a few simple steps.</p>
+          <div class="form-wrap">
+            <form class="booking-form" novalidate>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="booking-name-home">Full Name</label>
+                  <input id="booking-name-home" type="text" name="name" placeholder="Your name" />
+                </div>
+                <div class="form-field">
+                  <label for="booking-date-home">Check-in Date</label>
+                  <input id="booking-date-home" type="date" name="date" />
+                </div>
+                <div class="form-field">
+                  <label for="booking-room-home">Room Type</label>
+                  <select id="booking-room-home" name="roomType">
+                    <option value="">Select room</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Suite">Suite</option>
+                    <option value="Family">Family</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit Booking</button>
+              <p class="form-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>The Grand Machal</h3>
+          <p class="muted">Near Riverside Hills, Mashobra, Himachal Pradesh, India</p>
+          <p class="muted">Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p class="muted">Email: <a href="mailto:stay@thegrandmachal.com">stay@thegrandmachal.com</a></p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <p class="muted">© <span class="year"></span> The Grand Machal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
